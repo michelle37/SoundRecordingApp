@@ -14,12 +14,19 @@ class RecordPlayViewController: UIViewController {
     var audioPlay : AVAudioPlayer!
     var receivedAudio:RecordedAudio!
     
+    var autoEngine:AVAudioEngine!
+    
+    
     @IBOutlet weak var slow: UIButton!
     @IBOutlet weak var fast: UIButton!
     @IBOutlet weak var stop: UIButton!
+    @IBOutlet weak var ChipMonk: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        autoEngine = AVAudioEngine()
+        
         //setup the filepath for the audio file
 //        if let filePath = NSBundle.mainBundle().pathForResource("ego", ofType: "mp3"){
 //            //convert filepath from string to URL
@@ -57,5 +64,7 @@ class RecordPlayViewController: UIViewController {
         audioPlay.stop()
     }
 
+    @IBAction func ChipMonkBtn(sender: UIButton) {
+    }
 
 }

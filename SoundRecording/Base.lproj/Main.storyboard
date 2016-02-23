@@ -130,11 +130,24 @@
                                     <action selector="Stopbtn:" destination="JFN-su-i99" eventType="touchUpInside" id="g72-yU-dPS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOk-4F-ry2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="ChipmonkSound"/>
+                                <variation key="widthClass=compact"/>
+                                <connections>
+                                    <action selector="ChipMonkBtn:" destination="JFN-su-i99" eventType="touchUpInside" id="oXv-sZ-7TW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.68627450980392157" green="1" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QnF-HQ-ihk" firstAttribute="top" secondItem="9bZ-Xc-Cod" secondAttribute="bottom" constant="58" id="0nH-fh-lXm">
                                 <variation key="widthClass=compact" constant="67"/>
+                            </constraint>
+                            <constraint firstItem="qOk-4F-ry2" firstAttribute="top" secondItem="QnF-HQ-ihk" secondAttribute="bottom" constant="58" id="2M5-7c-19O"/>
+                            <constraint firstItem="qOk-4F-ry2" firstAttribute="centerX" secondItem="SqE-9n-fnK" secondAttribute="centerX" id="5wW-kT-Iak">
+                                <variation key="widthClass=compact" constant="-102.5"/>
                             </constraint>
                             <constraint firstItem="iYk-UB-fNe" firstAttribute="top" secondItem="9bZ-Xc-Cod" secondAttribute="bottom" constant="370" id="GJO-Xa-emh"/>
                             <constraint firstItem="FGI-Uz-vvZ" firstAttribute="top" secondItem="9bZ-Xc-Cod" secondAttribute="bottom" constant="58" id="Jlc-nR-eyt">
@@ -153,12 +166,15 @@
                                 <exclude reference="QnF-HQ-ihk"/>
                                 <exclude reference="FGI-Uz-vvZ"/>
                                 <exclude reference="iYk-UB-fNe"/>
+                                <exclude reference="qOk-4F-ry2"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Jlc-nR-eyt"/>
-                                <exclude reference="diu-Ry-rac"/>
                                 <exclude reference="0nH-fh-lXm"/>
                                 <exclude reference="dwM-qu-ShA"/>
+                                <exclude reference="Jlc-nR-eyt"/>
+                                <exclude reference="diu-Ry-rac"/>
+                                <exclude reference="2M5-7c-19O"/>
+                                <exclude reference="5wW-kT-Iak"/>
                                 <exclude reference="GJO-Xa-emh"/>
                                 <exclude reference="PtC-qy-U1D"/>
                             </mask>
@@ -168,18 +184,22 @@
                                 <include reference="QnF-HQ-ihk"/>
                                 <include reference="FGI-Uz-vvZ"/>
                                 <include reference="iYk-UB-fNe"/>
+                                <include reference="qOk-4F-ry2"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Jlc-nR-eyt"/>
-                                <include reference="diu-Ry-rac"/>
                                 <include reference="0nH-fh-lXm"/>
                                 <include reference="dwM-qu-ShA"/>
+                                <include reference="Jlc-nR-eyt"/>
+                                <include reference="diu-Ry-rac"/>
+                                <include reference="2M5-7c-19O"/>
+                                <include reference="5wW-kT-Iak"/>
                                 <include reference="GJO-Xa-emh"/>
                                 <include reference="PtC-qy-U1D"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="ChipMonk" destination="qOk-4F-ry2" id="KIQ-80-2wT"/>
                         <outlet property="fast" destination="FGI-Uz-vvZ" id="J2a-NV-v60"/>
                         <outlet property="slow" destination="QnF-HQ-ihk" id="yUO-br-nyk"/>
                         <outlet property="stop" destination="iYk-UB-fNe" id="MqO-e8-4gi"/>
@@ -187,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpu-WW-L0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068.5" y="495"/>
+            <point key="canvasLocation" x="2067.75" y="494.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fca-XI-THK">
@@ -209,6 +229,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ChipmonkSound" width="100" height="100"/>
         <image name="FastSound" width="100" height="100"/>
         <image name="Recording" width="100" height="100"/>
         <image name="SlowSound" width="100" height="100"/>
