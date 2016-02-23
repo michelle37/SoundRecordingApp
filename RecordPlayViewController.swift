@@ -24,7 +24,7 @@ class RecordPlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //instance of Avaudioengine
         autoEngine = AVAudioEngine()
         
         //setup the filepath for the audio file
